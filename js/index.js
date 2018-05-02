@@ -23,7 +23,7 @@ app.controller('appController', ['$scope','$http','$interval', function($scope, 
   
   // artwork
   $scope.getArtwork = function(){
-    $http.get('https://ws.audioscrobbler.com/2.0/?method=album.search&api_key=8e2a8811033e6a5880786382f2fca772&format=json&', {
+    $http.get('https://ws.audioscrobbler.com/2.0/?method=track.search&api_key=8e2a8811033e6a5880786382f2fca772&format=json&', {
                 params: {
                     album: $scope.artist.replace(/ *\([^)]*\) */g, "")
                 }
