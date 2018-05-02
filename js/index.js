@@ -28,7 +28,7 @@ app.controller('appController', ['$scope','$http','$interval', function($scope, 
                     album: $scope.artist.replace(/ *\([^)]*\) */g, "")
                 }
             }).then(function(response){
-                $scope.thumb = response.data.results.albummatches.album[0].image[3]['#text'] ? response.data.results.albummatches.album[0].image[3]['#text'] : 'https://vfmradio.github.io/img/logo.png';
+                $scope.thumb = response.data.results.trackmatches.track[0].image[3]['#text'] ? response.data.results.trackmatches.track[0].image[3]['#text'] : 'https://vfmradio.github.io/img/logo.png';
 
  
     });
