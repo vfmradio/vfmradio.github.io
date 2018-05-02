@@ -25,7 +25,7 @@ app.controller('appController', ['$scope','$http','$interval', function($scope, 
   $scope.getArtwork = function(){
     $http.get('https://ws.audioscrobbler.com/2.0/?method=track.search&api_key=8e2a8811033e6a5880786382f2fca772&format=json&', {
                 params: {
-                    album: $scope.artist.replace(/ *\([^)]*\) */g, "")
+                    track: $scope.artist.replace(/ *\([^)]*\) */g, "")
                 }
             }).then(function(response){
                 $scope.thumb = response.data.results.trackmatches.track[0].image[3]['#text'] ? response.data.results.trackmatches.track[0].image[3]['#text'] : 'https://vfmradio.github.io/img/logo.png';
